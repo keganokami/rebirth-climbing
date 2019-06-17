@@ -1,0 +1,12 @@
+// footer
+
+footer {
+  margin-right: -40px;
+  width: 100%;
+  margin-top: 50px;
+  color: #ddd;
+  padding-top: 8px;
+  height: 60px;
+  background: rgb(68, 68, 68);
+  @include text-center();
+}

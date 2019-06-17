@@ -1,0 +1,29 @@
+body {
+  margin: 0;
+}
+
+$widthMax: 100%;
+// wrapper
+.wrapper {
+  width: $widthMax;
+  margin-top: 55px;
+  margin: 0;
+  overflow: hidden;
+  @include mq-up(md) {
+    width: fit-content;
+  }
+  margin: 0 auto 0 auto;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  @include mq-down(md) {
+    width: 700px;
+    margin: 0 auto;
+  }
+  @include mq-down(sm) {
+    width: 300px;
+    margin: 0 auto;
+  }
+}

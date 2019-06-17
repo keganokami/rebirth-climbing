@@ -1,0 +1,17 @@
+// 角を6px丸める
+@mixin round6 {
+  border-radius: 6px;
+}
+
+// テキストを中央寄
+@mixin text-center {
+  text-align: center;
+  text-align: -webkit-center;
+}
+
+// formのフォーカス
+@mixin form_focus {
+  border: 1px solid #fa9e53;
+  outline: none;
+  box-shadow: 0 0 3px 1px rgba(218, 60, 65, 0.5);
+}
