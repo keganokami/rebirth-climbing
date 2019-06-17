@@ -1,0 +1,152 @@
+.q_email_form {
+  background: #f6f6f6;
+  @include round6();
+  border: 1px hsl(0, 0%, 70%) dashed;
+  margin: 50px auto;
+  width: 650px;
+  // background: #bbb;
+  padding: 10px 50px 10px 50px;
+  font-size: 20px;
+  @include mq-down(sm) {
+    width: 280px;
+    padding: 16px;
+  }
+  p {
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 30px;
+    @include mq-down(sm) {
+      font-size: 14px;
+    }
+  }
+  .q_title {
+    text-align: center;
+  }
+
+  .form {
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    display: inline-block;
+    border-bottom: 1px solid hsl(0, 0%, 70%);
+    text-align: left;
+
+    &:last-child {
+      border-bottom: 0;
+    }
+
+    label {
+      display: inline-block;
+      margin-bottom: 10px;
+      font-weight: bold;
+      width: 250px;
+      @include mq-down(sm) {
+        font-size: 14px;
+      }
+    }
+
+    @include mq-down(sm) {
+      width: 250px;
+    }
+  }
+  .submit_form {
+    // width: 650px;
+    // margin: 0 auto;
+    text-align: center;
+  }
+  input {
+    @include round6();
+    border: 1px solid #ccc;
+    &:focus {
+      @include form_focus;
+    }
+  }
+  input[type="text"] {
+    width: 350px;
+    height: 40px;
+    padding: 8px;
+    @include mq-down(sm) {
+      width: 250px;
+    }
+  }
+  input[type="email"] {
+    width: 350px;
+    height: 40px;
+    padding: 8px;
+    @include mq-down(sm) {
+      width: 250px;
+    }
+  }
+  select {
+    @include round6();
+    width: 200px;
+    height: 40px;
+    padding: 2px;
+
+    &:focus {
+      @include form_focus;
+    }
+    @include mq-down(sm) {
+      width: 250px;
+    }
+  }
+  button[type="submit"] {
+    color: #383838;
+    background: orange;
+    font-size: 16px;
+    font-weight: bold;
+    width: 200px;
+    height: 50px;
+    box-shadow: 0px 6px 0px hsl(32, 60%, 45%);
+    border: 0;
+    @include round6();
+    transition: 0.2s all ease 0s;
+    &:hover {
+      font-size: 16px;
+      font-weight: bold;
+      background: orange;
+      width: 200px;
+      height: 50px;
+      box-shadow: none;
+      transform: translate3d(0, 4px, 0);
+      @include round6();
+    }
+  }
+  .item {
+    margin-bottom: 10px;
+  }
+
+  select {
+    height: 30px;
+  }
+
+  textarea {
+    width: 650px;
+    height: 200px;
+    @include round6();
+    padding: 10px;
+    &:focus {
+      @include form_focus;
+    }
+    @include mq-down(md) {
+      width: 400px;
+    }
+    @include mq-down(sm) {
+      width: 250px;
+    }
+  }
+  clear: both;
+  span {
+    font-size: 12px;
+    color: red;
+  }
+
+  @include mq-down(md) {
+    width: 400px;
+    // margin: 0 auto;
+  }
+  // 300px以下
+  @include mq-down(sm) {
+    width: 250px;
+    padding: 15px;
+  }
+}
