@@ -1,0 +1,31 @@
+<div class="wrapper">
+  {include file="./../header.html"}
+  <img class="top-image" />
+  <div class="container">
+    <div class="main-contents">
+      <h1 class="content-title">{$midashi}</h1>
+      <p class="sub_message">{$sub_message|nl2br}</p>
+      <p class="pageMap">1件から5件を表示</p>
+      {foreach from=$posts item=post}
+      <div class="diary_block">
+        <div class="block_element_head">
+          <p>{$post['name']}</p>
+        </div>
+        <div class="block_element_post">
+          <p>{$post['message']}</p>
+        </div>
+        <div class="block_element_detail">
+          <a href="view.php?id={}">記事の詳細へ</a>
+        </div>
+        <div class="block_element_time">
+          <time>{$post['created']}</time>
+        </div>
+      </div>
+      {/foreach}
+      <div class="page-nation">
+        <span class="pre">前の記事へ</span><span class="next">次の記事へ</span>
+      </div>
+    </div>
+  </div>
+</div>
+{include file="./../footer.html"}

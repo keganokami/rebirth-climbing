@@ -1,0 +1,4 @@
+templates_c/
+upload_smarty/
+Smarty/
+node_modules/

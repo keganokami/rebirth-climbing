@@ -1,0 +1,57 @@
+<div class="wrapper">
+  {include file="./header.html"}
+  <div class="container">
+    <div class="main-contents">
+      <h1 class="content-title">{$head}</h1>
+      <p class="sub_message">{$sub_message|nl2br}</p>
+    </div>
+    <div class="error-box">
+      <span class="error">{$name_error}</span><br />
+      <span class="error">{$email_error}</span><br />
+      <span class="error">{$password_error}</span><br />
+      <span class="error">{$image_type_error}</span>
+    </div>
+    <div class="form_card">
+      <div class="form_body">
+        
+        <form action="" method="post" enctype="multipart/form-data">
+          <p>
+            <label for="name">ユーザー名</label>
+            <input
+              type="text"
+              name="name"
+              value="{$name}"
+              placeholder="miyata_coromo"
+            />
+          </p>
+          <p>
+            <label for="email">メールアドレス</label>
+            <input
+              type="email"
+              name="email"
+              value="{$email}"
+              placeholder="expample@xxx.com"
+            />
+          </p>
+          <span class="error">{$email_duplicate_error}</span>
+          <p>
+            <label for="password">パスワード</label>
+            <input type="password" name="password" value="{$pass}" />
+          </p>
+          <span class="error">{$password_duplicate_error}</span>
+          <p>
+            <label for="image">アイコン画像</label>
+            <input type="file" name="image" size="35" />
+          </p>
+          <span class="error">{$re_select_caution}</span>
+          <p>
+            <div class="submit">
+            <button type="submit" value="login">入力内容を確認する</button>
+            </div>
+          </p>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+  <!-- {include file="./footer.html"} -->

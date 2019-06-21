@@ -15,3 +15,15 @@
   outline: none;
   box-shadow: 0 0 3px 1px rgba(218, 60, 65, 0.5);
 }
+
+@mixin top-image {
+  width: $widthMax;
+  height: 550px;
+  // background-image: url(../../img/images.jpg); 各自指定する
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 1;
+  @include mq-down(sm) {
+    height: 200px;
+  }
+}

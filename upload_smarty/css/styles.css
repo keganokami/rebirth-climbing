@@ -1,0 +1,238 @@
+body {
+  margin: 0;
+}
+
+header {
+  width: 100%;
+  height: 80px;
+}
+
+header img {
+  line-height: 80px;
+}
+
+header nav {
+  float: right;
+  line-height: 80px;
+  margin-right: 20px;
+}
+
+header nav ul {
+  margin: 0;
+}
+
+header nav ul li {
+  float: left;
+  margin-right: 10px;
+  list-style-type: none;
+}
+
+.content-title {
+  text-align: center;
+  text-align: -webkit-center;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.main-contents .top-image {
+  background: #aaad;
+  width: 100%;
+  height: 300px;
+}
+
+.main-contents .sub_message {
+  width: 800px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.main-contents .index_news {
+  margin-top: 20px;
+  border: 1px solid #ddd;
+  border-bottom: 0;
+}
+
+.main-contents .index_news .head_line {
+  margin: 0;
+  background-color: #2a2a29;
+  color: #fff;
+  font-size: 22px;
+  padding: 20px;
+}
+
+.main-contents .index_news ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.main-contents .index_news ol li {
+  border-bottom: 1px solid #ddd;
+}
+
+.main-contents .index_news ol li h3 {
+  color: chocolate;
+  font-size: 18px;
+  padding-left: 120px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin: 0px;
+}
+
+.main-contents .index_news ol li p {
+  color: #2a2a29;
+  font-size: 14px;
+  width: 100px;
+  margin: 0;
+  position: absolute;
+  padding: 14px 0 10px 20px;
+}
+
+.contents_boxes {
+  display: flex;
+}
+
+.contents_boxes .box1 {
+  margin-top: 30px;
+  display: block;
+  width: 400px;
+  height: 200px;
+  background: #2a2a29;
+  margin-right: 10px;
+}
+
+.contents_boxes .box1:hover {
+  opacity: 0.8;
+  transition: 1s;
+}
+
+.contents_boxes .box2 {
+  margin-top: 30px;
+  display: block;
+  width: 400px;
+  height: 200px;
+  background: #2a2a29;
+  margin-right: 10px;
+}
+
+.contents_boxes .box2:hover {
+  opacity: 0.8;
+  transition: 1s;
+}
+
+.contents_boxes .box3 {
+  margin-top: 30px;
+  display: block;
+  width: 400px;
+  height: 200px;
+  background: #2a2a29;
+  margin-right: 10px;
+}
+
+.contents_boxes .box3:hover {
+  opacity: 0.8;
+  transition: 1s;
+}
+
+.contents_boxes .box3 {
+  margin-right: 0;
+}
+
+.introduction_contents {
+  margin: 0 auto;
+  margin-bottom: 100px;
+}
+
+.introduction_contents .introduction_box {
+  margin-top: 50px;
+  display: flex;
+}
+
+.introduction_contents .introduction_box:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.introduction_contents .introduction_box .text-box {
+  margin-left: 30px;
+  width: calc(100% - 420px);
+}
+
+.introduction_contents .introduction_box .img {
+  width: 500px;
+  height: 300px;
+  background: #bbb;
+  display: flex;
+  font-size: 36px;
+  color: #fff;
+  align-items: center;
+  justify-content: center;
+}
+
+.q_email_form {
+  margin: 0 auto;
+  width: 800px;
+  background: #bbb;
+  padding: 10px 50px 10px 50px;
+  font-size: 20px;
+  clear: both;
+}
+
+.q_email_form .form {
+  margin-bottom: 20px;
+}
+
+.q_email_form input {
+  border-radius: 6px;
+}
+
+.q_email_form input[type="text"] {
+  width: 300px;
+  height: 40px;
+  padding: 8px;
+}
+
+.q_email_form input[type="email"] {
+  width: 350px;
+  height: 40px;
+  padding: 8px;
+}
+
+.q_email_form select {
+  border-radius: 6px;
+  width: 200px;
+  height: 30px;
+  padding: 2px;
+}
+
+.q_email_form .item {
+  margin-bottom: 10px;
+}
+
+.q_email_form select {
+  height: 30px;
+}
+
+.q_email_form textarea {
+  width: 700px;
+  height: 200px;
+  border-radius: 6px;
+  padding: 10px;
+}
+
+.q_email_form span {
+  font-size: 12px;
+  color: red;
+}
+
+footer {
+  margin-top: 50px;
+  color: #ddd;
+  padding: 20px;
+  height: 60px;
+  background: #444444;
+  text-align: center;
+  text-align: -webkit-center;
+}

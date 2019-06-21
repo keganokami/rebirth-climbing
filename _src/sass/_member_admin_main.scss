@@ -1,0 +1,86 @@
+.wrapper {
+  margin-top: 100px;
+}
+
+.form_card {
+  display: block;
+  .form_body {
+    margin: 0px auto;
+    @include round6();
+    box-shadow: 2px 2px 3px #aaa;
+    padding: 30px;
+    background: #eeee;
+    @include mq-up(sm) {
+      width: 500px;
+    }
+  }
+
+  h1 {
+    text-align: center;
+  }
+  .error-box {
+    text-align: center;
+    .error {
+      color: brown;
+    }
+  }
+  clear: both;
+}
+
+input[type="text"] {
+  margin-top: 8px;
+  width: 320px;
+  height: 40px;
+  padding: 5px;
+  border: 1px solid #999999;
+  @include round6();
+  @include mq-down(sm) {
+    width: 200px;
+  }
+}
+
+input[type="email"] {
+  margin-top: 8px;
+  width: 320px;
+  height: 40px;
+  padding: 5px;
+  border: 1px solid #999999;
+  @include round6();
+  @include mq-down(sm) {
+    width: 200px;
+  }
+}
+
+input[type="password"] {
+  margin-top: 8px;
+  width: 320px;
+  height: 40px;
+  padding: 5px;
+  border: 1px solid #999999;
+  @include round6();
+  @include mq-down(sm) {
+    width: 200px;
+  }
+}
+
+label:not(.none) {
+  float: left;
+  line-height: 40px;
+  width: 150px;
+  @include mq-down(sm) {
+    float: none;
+    font-size: 14px;
+    .none {
+      font-size: 14px;
+    }
+  }
+}
+
+label.none {
+  @include mq-down(sm) {
+    font-size: 14px;
+  }
+}
+button {
+  margin-top: 8px;
+}

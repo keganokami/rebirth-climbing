@@ -1,0 +1,22 @@
+<div class="wrapper">
+  {include file="./member_only_header.html"}
+  <img class="top-image" />
+  <div class="container">
+    <div class="main-contents">
+      <h3 class="content-title">ようこそ{$member_name}さん</h3>
+      <p class="sub_message">{$sub_message|nl2br}</p>
+    </div>
+  </div>
+  <form action="" method="post">
+    <textarea
+      name="message"
+      id="message"
+      cols="60"
+      rows="20"
+      required
+    ></textarea>
+    <input type="hidden" name="reply_message_id" value="{}" />
+    <input type="submit" value="送信する" />
+  </form>
+</div>
+{include file="./footer.html"}

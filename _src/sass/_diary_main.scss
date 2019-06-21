@@ -1,0 +1,149 @@
+.top-image {
+  @include top-image();
+  background-image: url(../../img/images.jpg);
+}
+
+.container {
+  @include text-center();
+}
+
+.pageMap {
+  float: right;
+  @include mq-down(sm) {
+    float: none;
+  }
+}
+$mq-card-color: #fff6ef;
+$card-color: #ffffff;
+.diary_block {
+  clear: both;
+  display: block;
+  margin: 20px 0;
+  border-bottom: 1px dotted #aaa;
+  padding: 10px;
+  background: $card-color;
+  @include mq-down(sm) {
+    padding: 15px;
+    clear: both;
+    border-bottom: none;
+    background: $mq-card-color;
+    box-shadow: 2px 2px 3px #aaa;
+  }
+  @include mq-down(md) {
+    padding: 15px;
+    clear: both;
+    border-bottom: none;
+    background: $mq-card-color;
+    box-shadow: 3px 1px 3px #aaa;
+  }
+  .block_element_head {
+    text-align: left;
+    width: 200px;
+    display: table-cell;
+    padding: 10px;
+    border-right: 1px solid #aaa;
+    font-weight: 700;
+    @include mq-down(sm) {
+      text-align: center;
+      padding: 0px;
+      border-right: 0;
+      border-bottom: 1px solid #aaa;
+      display: block;
+    }
+    @include mq-down(md) {
+      text-align: center;
+      padding: 0px;
+      border-right: 0;
+      border-bottom: 1px solid #aaa;
+      display: block;
+    }
+  }
+  .block_element_post {
+    display: table-cell;
+    width: 430px;
+    padding: 10px;
+    border-right: 1px solid #aaa;
+    @include mq-down(sm) {
+      padding: 20px 0;
+      border-right: 0;
+      border-bottom: 1px solid #aaa;
+      text-align: left;
+      height: auto;
+    }
+    @include mq-down(md) {
+      padding: 20px 0;
+      border-right: 0;
+      border-bottom: 1px solid #aaa;
+      text-align: left;
+      height: auto;
+    }
+  }
+  .block_element_time {
+    width: 100px;
+    text-align: right;
+    display: table-cell;
+    padding: 10px;
+    font-size: 13px;
+    color: darkgrey;
+    @include mq-down(sm) {
+      text-align: center;
+      padding: 10px 0;
+      border-right: 0;
+      display: block;
+    }
+    @include mq-down(md) {
+      text-align: center;
+      padding: 10px 0;
+      border-right: 0;
+      display: block;
+    }
+  }
+  .block_element_detail {
+    width: 120px;
+    text-align: right;
+    display: table-cell;
+    padding: 10px;
+    font-size: 13px;
+    color: darkgrey;
+    @include mq-down(sm) {
+      text-align: center;
+
+      padding: 10px 0;
+      display: block;
+    }
+    @include mq-down(md) {
+      text-align: center;
+
+      padding: 10px 0;
+      display: block;
+    }
+  }
+}
+
+.page-nation {
+  text-align: center;
+  display: block;
+  height: auto;
+  padding: 10px;
+  span {
+    padding: 5px 15px;
+    @include round6();
+  }
+  .pre {
+    text-align: center;
+    background: #008d5e;
+    margin-right: 15px;
+    color: aliceblue;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+  .next {
+    background: #c86f09;
+    margin-right: 15px;
+    color: aliceblue;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}

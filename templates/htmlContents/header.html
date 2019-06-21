@@ -1,0 +1,30 @@
+<div id="app">
+  <a href="#" id="return-top" v-scroll-to="'#top'">Top</a>
+  <div id="top"></div>
+  <header id="header">
+    <menu-btn
+      :class="{ menu_btn: true, open_: menuFlag }"
+      @click.native="menuToggle"
+    >
+    </menu-btn>
+  </header>
+  <transition>
+    <div id="sp_menu" v-show="menuFlag">
+      <div class="menu_wrapp">
+        <ul class="menu-list">
+          <menu-component></menu-component>
+        </ul>
+        <!-- <div class="menu" v-show="isOpen"></div> -->
+      </div>
+    </div>
+  </transition>
+
+  <header class="web-header">
+    <img src="{$header_logo}" alt="ヘッダーロゴ" />
+    <nav>
+      <ul>
+        <menu-component></menu-component>
+      </ul>
+    </nav>
+  </header>
+</div>

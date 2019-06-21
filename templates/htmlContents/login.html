@@ -1,0 +1,40 @@
+<div class="wrapper">
+  <div class="container">
+    <div class="form_card">
+      <div  class="form_body">
+      <h1>ログインする</h1>
+      <div class="error-box"><span class="error">{$error}</span><br /></div>
+      <form action="" method="post">
+        <p>
+          <label for="email">メールアドレス</label>
+          <input
+            type="email"
+            name="email"
+            value=""
+            placeholder="expample@xxx.com"
+          />
+        </p>
+        <p>
+          <label for="password">パスワード</label>
+          <input type="password" name="password" value="パスワード" />
+        </p>
+        <p>
+          <label class="none" for="save"
+            ><input
+              id="save"
+              type="checkbox"
+              name="save"
+              value="on"
+            />次回からは自動的にログインする</label
+          >
+        </p>
+        <p>
+          <div class="submit">
+          <button type="submit" value="login">ログイン</button>
+          </div>
+        </p>
+      </form>
+    </div>
+    </div>
+  </div>
+</div>

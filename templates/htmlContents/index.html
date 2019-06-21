@@ -1,0 +1,79 @@
+<div class="wrapper">
+  {include file="./header.html"}
+  <img class="top-image" />
+  <div class="container">
+    <div class="main-contents">
+      <h1 class="content-title">{$message}</h1>
+      <p class="sub_message">{$sub_message|nl2br}</p>
+      <div class="index_news">
+        <h2 class="head_line">お知らせ</h2>
+        <ol>
+          <li>
+            <p class="date">{$news_title1.date}</p>
+            <h3 class="title">
+              {$news_title1.title}
+              <a href="{$news_title1.link}"></a>
+            </h3>
+          </li>
+          <li>
+            <p class="date">{$news_title2.date}</p>
+            <h3 class="title">
+              {$news_title2.title}
+              <a href="{$news_title2.link}"></a>
+            </h3>
+          </li>
+          <li>
+            <p class="date">{$news_title3.date}</p>
+            <h3 class="title">
+              {$news_title3.title}
+              <a href="{$news_title3.link}"></a>
+            </h3>
+          </li>
+        </ol>
+      </div>
+    </div>
+    <div class="contents_boxes">
+      <div class="box1">リンクコンテンツ</div>
+      <div class="box2">リンクコンテンツ</div>
+      <div class="box3">リンクコンテンツ</div>
+    </div>
+    <div class="introduction_contents">
+      <div class="introduction_box">
+        <div class="img">
+          <img src="../../img/content-image1.jpg" alt="fafa" />
+        </div>
+        <div class="text-box">
+          <h2>見出しが入ります</h2>
+          <div class="intro-text">
+            <p>テキストが入ります。</p>
+          </div>
+        </div>
+      </div>
+      <div class="introduction_box">
+        <div class="img">
+          <img src="../../img/content-image2.jpg" alt="fafa" />
+        </div>
+        <div class="text-box">
+          <h2>見出しが入ります</h2>
+          <div class="intro-text">
+            <p>テキストが入ります。</p>
+          </div>
+        </div>
+      </div>
+      <div class="introduction_box">
+        <div class="img">
+          <img src="../../img/content-image3.jpg" alt="fafa" />
+        </div>
+        <div class="text-box">
+          <h2>見出しが入ります</h2>
+          <div class="intro-text">
+            <p>テキストが入ります。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {include file="./../htmlContents/form.html"}
+  <!-- </div> -->
+</div>
+{include file="./footer.html"}
