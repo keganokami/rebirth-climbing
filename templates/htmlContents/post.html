@@ -6,17 +6,33 @@
       <h3 class="content-title">ようこそ{$member_name}さん</h3>
       <p class="sub_message">{$sub_message|nl2br}</p>
     </div>
-  </div>
-  <form action="" method="post">
-    <textarea
-      name="message"
-      id="message"
-      cols="60"
-      rows="20"
-      required
-    ></textarea>
-    <input type="hidden" name="reply_message_id" value="{}" />
-    <input type="submit" value="送信する" />
-  </form>
+    <div class="area_box">
+      <div class="post-area">
+        <form action="" method="post">
+            <textarea
+              name="message"
+              id="message"
+              cols="60"
+              rows="20"
+              required
+            ></textarea>
+            <div class="submit">
+              <input type="submit" value="送信する" />
+            </div>
+            <input type="hidden" name="reply_message_id" value="3" />
+          </form>
+      </div>
+      <div class="article_area">
+        投稿記事の一覧を表示する
+        
+     
+          {foreach from=$myPost item=post}
+          <p>{$post['message']}</p>
+          {/foreach}
+   
+        
+      </div>
+    </div>
+</div>
 </div>
 {include file="./footer.html"}
