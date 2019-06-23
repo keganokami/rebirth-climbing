@@ -44,12 +44,24 @@ if (!empty($_POST)) {
         $message->execute(array(
             $member_info['id'],
             $_POST['message'],
-            $_POST['reply_message_id'],
+            $_POST['reply_message_id']
         ));
+        
     }
     header('Location: diary.php');
     exit();
 } 
+
+$myPost;
+
+$myPosts = $db->prepare('SELECT * FROM posts WHERE member_id=?');
+$myPosts->execute(array($_SESSION['id']));
+$myPost = $myPosts->fetch();
+
+
+$smarty->assign("myPost", $myPost);
+
+
 
 /*main */
 $smarty->assign("head", "見出し１");
