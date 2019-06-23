@@ -6,7 +6,6 @@ body {
   width: 100%;
   margin-top: 55px;
   margin: 0;
-  overflow: hidden;
   margin: 0 auto 0 auto;
 }
 
@@ -33,6 +32,22 @@ body {
     width: 300px;
     margin: 0 auto;
   }
+}
+
+.back {
+  text-decoration: none;
+  width: 100px;
+  border: 1px solid #ccc;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px;
+  color: #3d3d3d;
+  transition: 1s ease-in-out;
+}
+
+.back:hover {
+  background: #e0e0e0;
+  transition: 1s ease-in-out;
 }
 
 .web-header {

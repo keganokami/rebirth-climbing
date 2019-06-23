@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   margin: 0;
 }
@@ -263,110 +264,99 @@ header {
   text-decoration: none;
 }
 
-.wrapper {
-  margin-top: 100px;
+.top-image {
+  margin-top: 120px;
 }
 
-.form_card {
-  display: block;
-  clear: both;
+#return-top {
+  display: none;
 }
 
-.form_card .form_body {
-  margin: 0px auto;
-  border-radius: 6px;
-  box-shadow: 2px 2px 3px #aaa;
-  padding: 30px;
-  background: #eeee;
+/*
+ボックスの分割
+横並びにする。
+
+*/
+.area_box {
+  display: flex;
 }
 
-@media screen and (min-width: 400px) {
-  .form_card .form_body {
-    width: 500px;
+@media screen and (max-width: 399px) {
+  .area_box {
+    display: block;
   }
 }
 
-.form_card h1 {
+@media screen and (max-width: 942px) {
+  .area_box {
+    display: block;
+  }
+}
+
+.area_box .post-area {
+  flex: 1;
+  width: 550px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 399px) {
+  .area_box .post-area {
+    width: 280px;
+    margin: 0 auto;
+  }
+}
+
+.area_box .post-area textarea {
+  margin-bottom: 15px;
+  border-radius: 6px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  width: 550px;
+}
+
+@media screen and (max-width: 399px) {
+  .area_box .post-area textarea {
+    width: 280px;
+  }
+}
+
+.area_box .post-area .submit {
+  margin-bottom: 120px;
+  width: 550px;
   text-align: center;
 }
 
-.form_card .error-box {
-  text-align: center;
-}
-
-.form_card .error-box .error {
-  color: brown;
-}
-
-input[type="text"] {
-  margin-top: 8px;
-  width: 320px;
-  height: 40px;
-  padding: 5px;
-  border: 1px solid #999999;
+.area_box .post-area .submit input[type="submit"] {
+  background: coral;
+  width: 100px;
+  height: 30px;
   border-radius: 6px;
+  color: #f1f1f1;
+  border: 0;
+  box-shadow: 0 0 8px #ffb1b1;
+  margin: 0 auto;
 }
 
 @media screen and (max-width: 399px) {
-  input[type="text"] {
-    width: 200px;
+  .area_box .post-area .submit {
+    width: 280px;
   }
 }
 
-input[type="email"] {
-  margin-top: 8px;
-  width: 320px;
-  height: 40px;
-  padding: 5px;
-  border: 1px solid #999999;
+.area_box .article_area {
+  width: 550px;
+  height: 400px;
+  padding: 10px;
   border-radius: 6px;
+  background: #f1f1f1;
+  border: 1px solid #ccc;
+  margin: 0 auto;
 }
 
 @media screen and (max-width: 399px) {
-  input[type="email"] {
-    width: 200px;
+  .area_box .article_area {
+    width: 280px;
   }
-}
-
-input[type="password"] {
-  margin-top: 8px;
-  width: 320px;
-  height: 40px;
-  padding: 5px;
-  border: 1px solid #999999;
-  border-radius: 6px;
-}
-
-@media screen and (max-width: 399px) {
-  input[type="password"] {
-    width: 200px;
-  }
-}
-
-label:not(.none) {
-  float: left;
-  line-height: 40px;
-  width: 150px;
-}
-
-@media screen and (max-width: 399px) {
-  label:not(.none) {
-    float: none;
-    font-size: 14px;
-  }
-  label:not(.none) .none {
-    font-size: 14px;
-  }
-}
-
-@media screen and (max-width: 399px) {
-  label.none {
-    font-size: 14px;
-  }
-}
-
-button {
-  margin-top: 8px;
 }
 
 footer {
