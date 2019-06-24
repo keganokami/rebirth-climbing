@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .top-image {
   margin-top: 120px;
 }
@@ -81,3 +82,88 @@ $smallWidth:280px;
 
 
 
+=======
+.top-image {
+  margin-top: 120px;
+}
+
+#return-top {
+    display: none;
+}
+
+/*
+ボックスの分割
+横並びにする。
+
+*/
+// 共通変数
+$displayWidth:550px;
+$smallWidth:280px;
+.area_box {
+    display: flex;
+    @include mq-down(sm) {
+        display: block;
+    }
+    @include mq-down(md) {
+        display: block;
+    }
+    .post-area {
+        flex: 1;
+        width: $displayWidth;
+        margin: 0 auto;
+        @include mq-down(sm) {
+            width: $smallWidth;
+            margin: 0 auto;
+        }
+        textarea {
+            margin-bottom: 15px;
+            @include round6();
+            padding: 8px;
+            border: 1px solid #ccc;
+            width: $displayWidth;
+            @include mq-down(sm) {
+                width: $smallWidth;
+            }
+        }
+        .submit {
+            margin-bottom: 120px;
+            width: $displayWidth;
+            text-align: center;
+            input[type="submit"] {
+                background: coral;
+                width: 100px;
+                height: 30px;
+                @include round6();
+                color: #f1f1f1;
+                border: 0;
+                box-shadow: 0 0 8px #ffb1b1;
+                margin: 0 auto;
+            }
+            @include mq-down(sm) {
+                width: $smallWidth;
+            }
+        }
+        
+    }
+    .article_area {
+        width: $displayWidth;
+        height: 400px;
+        padding: 10px;
+        @include round6();
+        background: #f1f1f1;
+        border:1px solid #ccc;
+        margin: 0 auto;
+        @include mq-down(sm) {
+            width: $smallWidth;
+        }
+
+    }
+}
+
+
+
+
+
+
+
+>>>>>>> cd50fdb797a5c9208b659db8555cb4fe77fc6691
