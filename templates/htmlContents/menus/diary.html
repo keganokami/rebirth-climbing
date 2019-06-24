@@ -12,10 +12,10 @@
           <p>{$post['name']}</p>
         </div>
         <div class="block_element_post">
-          <p>{$post['message']}</p>
+          <p>{$post['message']|mb_substr:0:20}...</p>
         </div>
         <div class="block_element_detail">
-          <a href="view.php?id={}">記事の詳細へ</a>
+          <a href="post_view.php?id={$post['id']}">記事の詳細へ</a>
         </div>
         <div class="block_element_time">
           <time>{$post['created']}</time>
@@ -23,8 +23,22 @@
       </div>
       {/foreach}
       <div class="page-nation">
-        <span class="pre">前の記事へ</span><span class="next">次の記事へ</span>
+        {if $page > 1}
+        <a href="diary.php?page={$page-1}" class="pre">{$prePage}</a>
+        {else}
+        <span>{$prePage}</span>
+        {/if}
+        {if $page < $maxPage}
+        <a href="diary.php?page={$page+1}" class="next">{$nextPage}</a>
+        {else}
+        <span>{$nextPage}</span>
+        {/if}
       </div>
+      <div class="latest_page">
+        {if $page > 1}
+      <a href="diary.php?page=1" class="latest">最新の記事へ</a>
+      {/if}
+    </div>
     </div>
   </div>
 </div>
