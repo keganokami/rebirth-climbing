@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-06-24 13:23:26
+/* Smarty version 3.1.33, created on 2019-06-24 14:03:06
   from 'C:\Apache24\htdocs\rebirth_climbing\templates\htmlContents\menus\diary.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d10cece9a1da5_61932547',
+  'unifunc' => 'content_5d10d81a578fd3_44314261',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '615c32c64b11258eed1dc710576d8e9998541168' => 
     array (
       0 => 'C:\\Apache24\\htdocs\\rebirth_climbing\\templates\\htmlContents\\menus\\diary.html',
-      1 => 1561382599,
+      1 => 1561383466,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:./../footer.html' => 1,
   ),
 ),false)) {
-function content_5d10cece9a1da5_61932547 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d10d81a578fd3_44314261 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="wrapper">
   <?php $_smarty_tpl->_subTemplateRender("file:./../header.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
