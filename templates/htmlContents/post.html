@@ -33,7 +33,11 @@
                 >{$post['created']}</a
               ></time
             >
-            <button id="delete_btn">削除</button>
+            <a
+              href="post_delete.php?id={$post['id']}"
+              onclick="return confirm('削除してよいですか');"
+              >削除</a
+            >
           </li>
           {/if} {/foreach}
         </ul>

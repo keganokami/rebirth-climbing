@@ -51,7 +51,7 @@ if (!empty($_POST)) {
     header('Location: diary.php');
     exit();
 } 
-// 
+// ページネーション処理
 //pageの計算
 $page  = $_REQUEST['page'];
 if ($page == '') {
@@ -70,13 +70,13 @@ $smarty->assign("nextPage", "次の記事へ");
 
 $start = 5 * ($page - 1);
 
-
 $myPost;
 $id = $_SESSION['id'];
 $myPosts = $db->prepare('SELECT * FROM posts WHERE member_id=? LIMIT ?,5');
 $myPosts->bindParam(1,$id, PDO::PARAM_INT);
 $myPosts->bindParam(2,$start, PDO::PARAM_INT);
 $myPosts->execute();
+
 $smarty->assign("member_id", $id);
 $smarty->assign("myPosts", $myPosts);
 
