@@ -53,13 +53,12 @@ if (!empty($_POST)) {
 } 
 
 $myPost;
-
+$id = $_SESSION['id'];
 $myPosts = $db->prepare('SELECT * FROM posts WHERE member_id=?');
-$myPosts->execute(array($_SESSION['id']));
-$myPost = $myPosts->fetch();
+$myPosts->execute(array($id));
 
 
-$smarty->assign("myPost", $myPost);
+$smarty->assign("myPosts", $myPosts);
 
 
 

@@ -9,30 +9,36 @@
     <div class="area_box">
       <div class="post-area">
         <form action="" method="post">
-            <textarea
-              name="message"
-              id="message"
-              cols="60"
-              rows="20"
-              required
-            ></textarea>
-            <div class="submit">
-              <input type="submit" value="送信する" />
-            </div>
-            <input type="hidden" name="reply_message_id" value="3" />
-          </form>
+          <textarea
+            name="message"
+            id="message"
+            cols="60"
+            rows="20"
+            required
+          ></textarea>
+          <div class="submit">
+            <input type="submit" value="送信する" />
+          </div>
+          <input type="hidden" name="reply_message_id" value="3" />
+        </form>
       </div>
       <div class="article_area">
         投稿記事の一覧を表示する
-        
-     
-          {foreach from=$myPost item=post}
-          <p>{$post['message']}</p>
+        <ul>
+          {foreach from=$myPosts item=post}
+          <li>
+            {$post['message']|mb_substr:0:20}...
+            <time
+              ><a href="post_update.php?id={$post['id']}"
+                >{$post['created']}</a
+              ></time
+            >
+            <button id="delete_btn">削除</button>
+          </li>
           {/foreach}
-   
-        
+        </ul>
       </div>
     </div>
-</div>
+  </div>
 </div>
 {include file="./footer.html"}
