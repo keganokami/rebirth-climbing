@@ -4,7 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <title>一言日記【テスト】</title>
     <!-- smarty.phpから見たパスにする。 -->
-    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/post_styles.css" />
 
     
   </head>
