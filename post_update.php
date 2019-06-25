@@ -49,7 +49,17 @@ if (!empty($_POST)) {
     header('Location: diary.php');
     exit();
 } 
+/*
+編集テキストエリアに投稿内容を表示
+URLパラメータのidを取ってくる。
+*/
+$myPost;
+$post_id = $_REQUEST['id'];
+$myPosts = $db->prepare('SELECT * FROM posts WHERE id=?');
+$myPosts->execute(array($post_id));
+$myPost = $myPosts->fetch();
 
+$smarty->assign("myPost", $myPost);
 
 
 
