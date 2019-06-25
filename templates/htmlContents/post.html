@@ -25,7 +25,7 @@
       <div class="article_area">
         投稿記事の一覧を表示する
         <ul>
-          {foreach from=$myPosts item=post}
+          {foreach from=$myPosts item=post} {if $id === $myPost['member_id']}
           <li>
             {$post['message']|mb_substr:0:20}...
             <time
@@ -35,8 +35,24 @@
             >
             <button id="delete_btn">削除</button>
           </li>
-          {/foreach}
+          {/if} {/foreach}
         </ul>
+        <div class="page-nation">
+          {if $page > 1}
+          <a href="post.php?page={$page-1}" class="pre">{$prePage}</a>
+          {else}
+          <span>{$prePage}</span>
+          {/if} {if $page < $maxPage}
+          <a href="post.php?page={$page+1}" class="next">{$nextPage}</a>
+          {else}
+          <span>{$nextPage}</span>
+          {/if}
+        </div>
+        <div class="latest_page">
+          {if $page > 1}
+          <a href="post.php?page=1" class="latest">最新の記事へ</a>
+          {/if}
+        </div>
       </div>
     </div>
   </div>

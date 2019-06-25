@@ -51,14 +51,35 @@ if (!empty($_POST)) {
     header('Location: diary.php');
     exit();
 } 
+// 
+//pageの計算
+$page  = $_REQUEST['page'];
+if ($page == '') {
+    $page = 1;
+}
+$page = max($page, 1);
+$counts = $db->query('SELECT COUNT(*) as cnt FROM posts');
+$cnt = $counts->fetch();
+$maxPage = ceil($cnt['cnt'] / 5);
+$page = min($page, $maxPage);
+
+$smarty->assign("page", $page);
+$smarty->assign("maxPage", $maxPage);
+$smarty->assign("prePage", "前の記事へ");
+$smarty->assign("nextPage", "次の記事へ");
+
+$start = 5 * ($page - 1);
+
 
 $myPost;
 $id = $_SESSION['id'];
-$myPosts = $db->prepare('SELECT * FROM posts WHERE member_id=?');
-$myPosts->execute(array($id));
-
-
+$myPosts = $db->prepare('SELECT * FROM posts WHERE member_id=? LIMIT ?,5');
+$myPosts->bindParam(1,$id, PDO::PARAM_INT);
+$myPosts->bindParam(2,$start, PDO::PARAM_INT);
+$myPosts->execute();
+$smarty->assign("member_id", $id);
 $smarty->assign("myPosts", $myPosts);
+
 
 
 
