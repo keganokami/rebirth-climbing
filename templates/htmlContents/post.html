@@ -4,7 +4,7 @@
   <div class="container">
     <div class="main-contents">
       <!-- <h3 class="content-title">ようこそ{$member_name}さん</h3> -->
-      <p class="sub_message">{$sub_message|nl2br}</p>
+      <p class="sub_message">{$sub_message|nl2br|escape:'html'}</p>
     </div>
     <div class="area_box">
       <div class="post-area">
@@ -23,7 +23,7 @@
         </form>
       </div>
       <div class="article_area">
-        {$member_name}さんの投稿記事の一覧
+        {$member_name|escape:'html'}さんの投稿記事の一覧
         <p class="edit">記事の編集は日付のリンクから遷移できます。</p>
         <ul>
           {foreach from=$myPosts item=post} {if $id === $myPost['member_id']}

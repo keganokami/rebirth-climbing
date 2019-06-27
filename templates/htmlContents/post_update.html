@@ -3,14 +3,14 @@
   <img class="top-image" />
   <div class="container">
     <div class="main-contents">
-      <h3 class="content-title">ようこそ{$member_name}さん</h3>
-      <p class="sub_message">{$sub_message|nl2br}</p>
+      <h3 class="content-title">ようこそ{$member_name|escape:'html'}さん</h3>
+      <p class="sub_message">{$sub_message|nl2br|escape:'html'}</p>
     </div>
     <div class="area_box">
       <div class="post-area">
         <form action="" method="post">
           <textarea name="message" id="message" cols="60" rows="20" required>
-{$myPost['message']}</textarea
+{$myPost['message']|escape:'html'}</textarea
           >
           <div class="submit">
             <input type="submit" value="編集を反映する" />

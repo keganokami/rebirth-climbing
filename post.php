@@ -65,8 +65,8 @@ $page = min($page, $maxPage);
 
 $smarty->assign("page", $page);
 $smarty->assign("maxPage", $maxPage);
-$smarty->assign("prePage", "前の記事へ");
-$smarty->assign("nextPage", "次の記事へ");
+$smarty->assign("prePage", "前のページへ");
+$smarty->assign("nextPage", "次のページへ");
 
 $start = ceil(10 * ($page - 1));
 

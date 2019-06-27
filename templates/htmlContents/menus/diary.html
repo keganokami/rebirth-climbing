@@ -5,14 +5,14 @@
     <div class="main-contents">
       <h1 class="content-title">{$midashi}</h1>
       <p class="sub_message">{$sub_message|nl2br}</p>
-      <p class="pageMap">1件から5件を表示</p>
+      <p class="pageMap">{$page}/{$maxPage}ページ</p>
       {foreach from=$posts item=post}
       <div class="diary_block">
         <div class="block_element_head">
-          <p>{$post['name']}</p>
+          <p>{$post['name']|escape:'html'}</p>
         </div>
         <div class="block_element_post">
-          <p>{$post['message']|mb_substr:0:20}...</p>
+          <p>{$post['message']|mb_substr:0:20|escape:'html'}...</p>
         </div>
         <div class="block_element_detail">
           <a href="post_view.php?id={$post['id']}">記事の詳細へ</a>
@@ -27,8 +27,7 @@
         <a href="diary.php?page={$page-1}" class="pre">{$prePage}</a>
         {else}
         <span>{$prePage}</span>
-        {/if}
-        {if $page < $maxPage}
+        {/if} {if $page < $maxPage}
         <a href="diary.php?page={$page+1}" class="next">{$nextPage}</a>
         {else}
         <span>{$nextPage}</span>
@@ -36,9 +35,9 @@
       </div>
       <div class="latest_page">
         {if $page > 1}
-      <a href="diary.php?page=1" class="latest">最新の記事へ</a>
-      {/if}
-    </div>
+        <a href="diary.php?page=1" class="latest">最新の記事へ</a>
+        {/if}
+      </div>
     </div>
   </div>
 </div>
