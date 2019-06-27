@@ -304,9 +304,11 @@ header {
   margin-bottom: 120px;
   width: 550px;
   text-align: center;
+  margin-bottom: 60px;
 }
 
 .area_box .post-area .submit input[type="submit"] {
+  cursor: pointer;
   background: coral;
   width: 150px;
   height: 40px;
@@ -316,6 +318,10 @@ header {
   box-shadow: 0 0 8px #ffb1b1;
   margin: 0 auto;
   font-size: 16px;
+}
+
+.area_box .post-area .submit input[type="submit"]:hover {
+  opacity: 0.8;
 }
 
 @media screen and (max-width: 399px) {

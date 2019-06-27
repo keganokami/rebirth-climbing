@@ -44,7 +44,9 @@ $smallWidth: 280px;
       margin-bottom: 120px;
       width: $displayWidth;
       text-align: center;
+      margin-bottom: 60px;
       input[type="submit"] {
+        cursor: pointer;
         background: coral;
         width: 150px;
         height: 40px;
@@ -54,6 +56,9 @@ $smallWidth: 280px;
         box-shadow: 0 0 8px #ffb1b1;
         margin: 0 auto;
         font-size: 16px;
+        &:hover {
+          opacity: 0.8;
+        }
       }
       @include mq-down(sm) {
         width: $smallWidth;
@@ -139,6 +144,3 @@ $smallWidth: 280px;
   margin: 0;
 }
 // ページネーションはdiary_main.scssを参照している
-
-.back {
-}
