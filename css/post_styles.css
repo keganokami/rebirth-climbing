@@ -249,10 +249,6 @@ header {
   text-decoration: none;
 }
 
-.top-image {
-  margin-top: 120px;
-}
-
 #return-top {
   display: none;
 }
@@ -313,13 +309,14 @@ header {
 
 .area_box .post-area .submit input[type="submit"] {
   background: coral;
-  width: 100px;
-  height: 30px;
+  width: 150px;
+  height: 40px;
   border-radius: 6px;
   color: #f1f1f1;
   border: 0;
   box-shadow: 0 0 8px #ffb1b1;
   margin: 0 auto;
+  font-size: 16px;
 }
 
 @media screen and (max-width: 399px) {
@@ -351,12 +348,20 @@ header {
   margin: 10px 0;
   list-style: none;
   display: flex;
-  border-bottom: 1px solid #e2e2e2;
+  border-bottom: 1px solid #ececec;
+  padding: 5px;
+  border-radius: 6px;
+}
+
+@media screen and (max-width: 399px) {
+  .area_box .article_area ul li {
+    display: block;
+  }
 }
 
 .area_box .article_area ul li:hover {
   opacity: 0.8;
-  background: #ccc;
+  background: #e7e7e7;
 }
 
 .area_box .article_area ul li p {
@@ -370,11 +375,19 @@ header {
 }
 
 .area_box .article_area ul li time a {
-  color: #525252;
+  color: #757575;
+  opacity: 0.8;
 }
 
 .area_box .article_area ul li time a:hover {
-  opacity: 0.8;
+  opacity: 1;
+  color: #363636;
+}
+
+@media screen and (max-width: 399px) {
+  .area_box .article_area ul li time {
+    font-size: 14px;
+  }
 }
 
 .area_box .article_area ul li .del {
@@ -389,8 +402,19 @@ header {
   text-decoration: none;
 }
 
+.area_box .article_area ul li .del:hover {
+  background: #d6d6d6;
+  border: 1px solid #6e6e6e;
+}
+
 .page-nation {
   clear: both;
+}
+
+.edit {
+  font-size: 12px;
+  color: #ff6a6a;
+  margin: 0;
 }
 
 .top-image {
