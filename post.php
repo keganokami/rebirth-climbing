@@ -57,8 +57,10 @@ $page  = $_REQUEST['page'];
 if ($page == '') {
     $page = 1;
 }
+$id = $_SESSION['id'];
 $page = max($page, 1);
-$counts = $db->query('SELECT COUNT(*) as cnt FROM posts');
+$counts = $db->prepare('SELECT COUNT(*) as cnt FROM posts WHERE member_id=?');
+$counts->execute(array($id));
 $cnt = $counts->fetch();
 $maxPage = ceil($cnt['cnt'] / 10);
 $page = min($page, $maxPage);
@@ -68,10 +70,9 @@ $smarty->assign("maxPage", $maxPage);
 $smarty->assign("prePage", "前のページへ");
 $smarty->assign("nextPage", "次のページへ");
 
-$start = ceil(10 * ($page - 1));
+$start = 10 * ($page - 1);
 
-$myPost;
-$id = $_SESSION['id'];
+
 $myPosts = $db->prepare('SELECT * FROM posts WHERE member_id=? LIMIT ?,10');
 $myPosts->bindParam(1,$id, PDO::PARAM_INT);
 $myPosts->bindParam(2,$start, PDO::PARAM_INT);
