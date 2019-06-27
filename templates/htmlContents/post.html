@@ -49,11 +49,11 @@
           {if $page > 1}
           <a href="post.php?page={$page-1}" class="pre">{$prePage}</a>
           {else}
-          <span>{$prePage}</span>
+          <span class="non_page">{$prePage}</span>
           {/if} {if $page < $maxPage}
           <a href="post.php?page={$page+1}" class="next">{$nextPage}</a>
           {else}
-          <span>{$nextPage}</span>
+          <span class="non_page">{$nextPage}</span>
           {/if}
         </div>
         <div class="latest_page">

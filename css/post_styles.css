@@ -412,10 +412,6 @@ header {
   border: 1px solid #6e6e6e;
 }
 
-.page-nation {
-  clear: both;
-}
-
 .edit {
   font-size: 12px;
   color: #ff6a6a;
@@ -615,7 +611,6 @@ header {
 
 .page-nation .next {
   background: #c86f09;
-  margin-right: 15px;
   color: aliceblue;
 }
 
@@ -697,6 +692,19 @@ header {
   padding: 8px;
   color: #3d3d3d;
   transition: 1s ease-in-out;
+}
+
+.page-nation {
+  clear: both;
+}
+
+.page-nation .non_page {
+  color: #525252;
+  margin-right: 10px;
+}
+
+.page-nation .non_page + .non_page {
+  margin-left: 10px;
 }
 
 .post_name {
