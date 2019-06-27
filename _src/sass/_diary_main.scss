@@ -168,3 +168,53 @@ $card-color: #ffffff;
     }
   }
 }
+
+//記事の詳細画面
+.post_info {
+  margin: 0 auto;
+  width: 600px;
+  @include mq-down(sm) {
+    margin-top: 8px;
+    width: 300px;
+  }
+  .detail_block_element_head,
+  .detail_block_element_time {
+    text-align: right;
+    font-size: 14px;
+    color: #494949;
+  }
+}
+
+.detail_diary_block {
+  background: #fffafa;
+  padding: 20px;
+  margin: 0 auto;
+  height: 300px;
+  width: 600px;
+  border-radius: 6px;
+  box-shadow: 0px 0px 4px #858585;
+  border: 1px solid #ccc;
+  margin-bottom: 30px;
+  @include mq-down(sm) {
+    margin-top: 8px;
+    width: 260px;
+  }
+}
+.back_area {
+  width: 147px;
+  margin: 0 auto;
+  .back {
+    text-decoration: none;
+    width: 100px;
+    border: 1px solid #ccc;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px;
+    color: #3d3d3d;
+    transition: 1s ease-in-out;
+  }
+}
+// 投稿者と日付の間の余白調整
+.post_name {
+  margin: 5px 0;
+}

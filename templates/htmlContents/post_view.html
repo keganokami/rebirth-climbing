@@ -8,20 +8,20 @@
     </div>
   </div>
   <div class="post_info">
-  <div class="detail_block_element_head">
-      <p>投稿者：{$post['name']}</p>
+    <div class="detail_block_element_head">
+      <p class="post_name">投稿者：{$post['name']}</p>
     </div>
     <div class="detail_block_element_time">
       <time>{$post['created']}</time>
     </div>
   </div>
   <div class="detail_diary_block">
-      <div class="detail_block_element_post">
-          <p>{$post['message']|nl2br}</p>
-        </div>
+    <div class="detail_block_element_post">
+      <p>{$post['message']|nl2br}</p>
+    </div>
   </div>
   <div class="back_area">
     <a class="back" href="diary.php">記事の一覧へ戻る</a>
-</div>
+  </div>
 </div>
 {include file="./footer.html"}

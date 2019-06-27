@@ -60,10 +60,11 @@ $smallWidth: 280px;
       }
     }
   }
+  // 投稿一覧のスタイル
   .article_area {
     width: $displayWidth;
     height: auto;
-    padding: 15px;
+    padding: 10px;
     @include round6();
     border: 1px solid #ccc;
     margin: 0 auto;
@@ -139,4 +140,5 @@ $smallWidth: 280px;
 }
 // ページネーションはdiary_main.scssを参照している
 
-// 投稿一覧のスタイル
+.back {
+}

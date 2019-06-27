@@ -8,7 +8,7 @@ $widthMax: 100%;
   width: $widthMax;
   margin-top: 55px;
   margin: 0;
-  overflow: hidden;
+  // overflow: hidden;
   @include mq-up(md) {
     width: fit-content;
   }
