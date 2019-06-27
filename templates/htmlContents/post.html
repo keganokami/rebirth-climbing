@@ -27,14 +27,17 @@
         <ul>
           {foreach from=$myPosts item=post} {if $id === $myPost['member_id']}
           <li>
-            {$post['message']|mb_substr:0:20}...
+            <p class="post_head">
+              {$post['message']|mb_substr:0:15|escape:'html'}...
+            </p>
             <time
-              ><a href="post_update.php?id={$post['id']}"
+              ><a href="post_update.php?id={$post['id']|escape:'url'}"
                 >{$post['created']}</a
               ></time
             >
             <a
-              href="post_delete.php?id={$post['id']}"
+              class="del"
+              href="post_delete.php?id={$post['id']|escape:'url'}"
               onclick="return confirm('削除してよいですか');"
               >削除</a
             >

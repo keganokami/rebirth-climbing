@@ -6,6 +6,7 @@ body {
   width: 100%;
   margin-top: 55px;
   margin: 0;
+  overflow: hidden;
   margin: 0 auto 0 auto;
 }
 
@@ -32,22 +33,6 @@ body {
     width: 300px;
     margin: 0 auto;
   }
-}
-
-.back {
-  text-decoration: none;
-  width: 100px;
-  border: 1px solid #ccc;
-  text-align: center;
-  border-radius: 6px;
-  padding: 8px;
-  color: #3d3d3d;
-  transition: 1s ease-in-out;
-}
-
-.back:hover {
-  background: #e0e0e0;
-  transition: 1s ease-in-out;
 }
 
 .web-header {
@@ -295,7 +280,6 @@ header {
 
 .diary_block {
   clear: both;
-  height: auto;
   display: block;
   margin: 20px 0;
   border-bottom: 1px dotted #aaa;
@@ -353,7 +337,6 @@ header {
 }
 
 .diary_block .block_element_post {
-  text-align: left;
   display: table-cell;
   width: 430px;
   padding: 10px;
@@ -362,7 +345,6 @@ header {
 
 @media screen and (max-width: 399px) {
   .diary_block .block_element_post {
-    text-align: left;
     padding: 20px 0;
     border-right: 0;
     border-bottom: 1px solid #aaa;
@@ -435,25 +417,15 @@ header {
 
 .page-nation {
   text-align: center;
-  margin: 0 auto;
+  display: block;
   height: auto;
   padding: 10px;
-  width: 100%;
-}
-
-.page-nation span {
-  padding: 5px 15px;
-  border-radius: 6px;
-  width: 100px;
-  background: #ffffff;
 }
 
 .page-nation a {
-  text-decoration: none;
-  display: inline-block;
   padding: 5px 15px;
   border-radius: 6px;
-  width: 100px;
+  text-decoration: none;
 }
 
 .page-nation .pre {
@@ -468,7 +440,6 @@ header {
 }
 
 .page-nation .next {
-  text-align: center;
   background: #c86f09;
   margin-right: 15px;
   color: aliceblue;
@@ -479,80 +450,25 @@ header {
 }
 
 .latest_page {
-  margin: 0;
+  display: block;
+  text-align: center;
+  height: auto;
+  padding: 10px;
 }
 
 .latest_page a {
-  text-decoration: none;
-  display: inline-block;
   padding: 5px 15px;
   border-radius: 6px;
-  width: 100px;
+  text-decoration: none;
 }
 
 .latest_page .latest {
-  background: #cfcfcf;
-  color: #3a3a3a;
+  border: 1px solid #ccc;
+  color: #4b4b4b;
 }
 
 .latest_page .latest:hover {
   opacity: 0.8;
-}
-
-.post_info {
-  width: 600px;
-  margin: 0 auto;
-}
-
-@media screen and (max-width: 399px) {
-  .post_info {
-    margin-top: 8px;
-    width: 300px;
-  }
-}
-
-.post_info .detail_block_element_head,
-.post_info .detail_block_element_time {
-  text-align: right;
-  font-size: 14px;
-  color: #494949;
-}
-
-.post_info .detail_block_element_head p, .post_info .detail_block_element_head time,
-.post_info .detail_block_element_time p,
-.post_info .detail_block_element_time time {
-  margin: 5px 0px;
-}
-
-.detail_diary_block {
-  background: #fffafa;
-  padding: 20px;
-  margin: 0 auto;
-  height: 300px;
-  width: 600px;
-  border-radius: 6px;
-  box-shadow: 0px 0px 4px  #858585;
-  border: 1px solid #ccc;
-  margin-bottom: 30px;
-}
-
-@media screen and (max-width: 399px) {
-  .detail_diary_block {
-    margin-top: 8px;
-    width: 260px;
-  }
-}
-
-.back_area {
-  margin: 0 auto;
-  width: 200px;
-}
-
-@media screen and (max-width: 399px) {
-  .back_area {
-    margin-top: 8px;
-    width: 147px;
-  }
 }
 
 footer {

@@ -125,9 +125,10 @@ $card-color: #ffffff;
   display: block;
   height: auto;
   padding: 10px;
-  span {
+  a {
     padding: 5px 15px;
     @include round6();
+    text-decoration: none;
   }
   .pre {
     text-align: center;
@@ -142,6 +143,26 @@ $card-color: #ffffff;
     background: #c86f09;
     margin-right: 15px;
     color: aliceblue;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
+.latest_page {
+  display: block;
+  text-align: center;
+  height: auto;
+  padding: 10px;
+
+  a {
+    padding: 5px 15px;
+    @include round6();
+    text-decoration: none;
+  }
+
+  .latest {
+    border: 1px solid #ccc;
+    color: #4b4b4b;
     &:hover {
       opacity: 0.8;
     }

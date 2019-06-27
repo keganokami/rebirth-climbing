@@ -1,10 +1,9 @@
-<<<<<<< HEAD
 .top-image {
   margin-top: 120px;
 }
 
 #return-top {
-    display: none;
+  display: none;
 }
 
 /*
@@ -13,157 +12,111 @@
 
 */
 // 共通変数
-$displayWidth:550px;
-$smallWidth:280px;
+$displayWidth: 550px;
+$smallWidth: 280px;
 .area_box {
-    display: flex;
+  display: flex;
+  @include mq-down(sm) {
+    display: block;
+  }
+  @include mq-down(md) {
+    display: block;
+  }
+  .post-area {
+    flex: 1;
+    width: $displayWidth;
+    margin: 0 auto;
     @include mq-down(sm) {
-        display: block;
+      width: $smallWidth;
+      margin: 0 auto;
     }
-    @include mq-down(md) {
-        display: block;
+    textarea {
+      margin-bottom: 15px;
+      @include round6();
+      padding: 8px;
+      border: 1px solid #ccc;
+      width: $displayWidth;
+      @include mq-down(sm) {
+        width: $smallWidth;
+      }
     }
-    .post-area {
-        flex: 1;
-        width: $displayWidth;
-        margin: 0 auto;
-        @include mq-down(sm) {
-            width: $smallWidth;
-            margin: 0 auto;
-        }
-        textarea {
-            margin-bottom: 15px;
-            @include round6();
-            padding: 8px;
-            border: 1px solid #ccc;
-            width: $displayWidth;
-            @include mq-down(sm) {
-                width: $smallWidth;
-            }
-        }
-        .submit {
-            margin-bottom: 120px;
-            width: $displayWidth;
-            text-align: center;
-            input[type="submit"] {
-                background: coral;
-                width: 100px;
-                height: 30px;
-                @include round6();
-                color: #f1f1f1;
-                border: 0;
-                box-shadow: 0 0 8px #ffb1b1;
-                margin: 0 auto;
-            }
-            @include mq-down(sm) {
-                width: $smallWidth;
-            }
-        }
-        
-    }
-    .article_area {
-        width: $displayWidth;
-        height: 400px;
-        padding: 10px;
+    .submit {
+      margin-bottom: 120px;
+      width: $displayWidth;
+      text-align: center;
+      input[type="submit"] {
+        background: coral;
+        width: 100px;
+        height: 30px;
         @include round6();
-        background: #f1f1f1;
-        border:1px solid #ccc;
+        color: #f1f1f1;
+        border: 0;
+        box-shadow: 0 0 8px #ffb1b1;
         margin: 0 auto;
-        @include mq-down(sm) {
-            width: $smallWidth;
-        }
-
+      }
+      @include mq-down(sm) {
+        width: $smallWidth;
+      }
     }
-}
+  }
+  .article_area {
+    width: $displayWidth;
+    height: auto;
+    padding: 15px;
+    @include round6();
 
-
-
-
-
-
-
-=======
-.top-image {
-  margin-top: 120px;
-}
-
-#return-top {
-    display: none;
-}
-
-/*
-ボックスの分割
-横並びにする。
-
-*/
-// 共通変数
-$displayWidth:550px;
-$smallWidth:280px;
-.area_box {
-    display: flex;
+    border: 1px solid #ccc;
+    margin: 0 auto;
     @include mq-down(sm) {
-        display: block;
+      width: $smallWidth;
     }
-    @include mq-down(md) {
-        display: block;
-    }
-    .post-area {
-        flex: 1;
-        width: $displayWidth;
-        margin: 0 auto;
-        @include mq-down(sm) {
-            width: $smallWidth;
-            margin: 0 auto;
-        }
-        textarea {
-            margin-bottom: 15px;
-            @include round6();
-            padding: 8px;
-            border: 1px solid #ccc;
-            width: $displayWidth;
-            @include mq-down(sm) {
-                width: $smallWidth;
-            }
-        }
-        .submit {
-            margin-bottom: 120px;
-            width: $displayWidth;
-            text-align: center;
-            input[type="submit"] {
-                background: coral;
-                width: 100px;
-                height: 30px;
-                @include round6();
-                color: #f1f1f1;
-                border: 0;
-                box-shadow: 0 0 8px #ffb1b1;
-                margin: 0 auto;
-            }
-            @include mq-down(sm) {
-                width: $smallWidth;
-            }
-        }
-        
-    }
-    .article_area {
-        width: $displayWidth;
-        height: 400px;
-        padding: 10px;
-        @include round6();
-        background: #f1f1f1;
-        border:1px solid #ccc;
-        margin: 0 auto;
-        @include mq-down(sm) {
-            width: $smallWidth;
-        }
+    ul {
+      padding: 0;
 
+      li {
+        margin: 10px 0;
+        list-style: none;
+        display: flex;
+        border-bottom: 1px solid #e2e2e2;
+        &:hover {
+          opacity: 0.8;
+          background: #ccc;
+        }
+        p {
+          margin: 0;
+          width: 250px;
+          text-align: left;
+          .post_head {
+          }
+        }
+        time {
+          margin-right: 20px;
+          a {
+            color: #525252;
+            &:hover {
+              opacity: 0.8;
+            }
+          }
+        }
+        .del {
+          width: auto;
+          height: auto;
+          padding: 0 5px;
+          background: #ffffff;
+          border: 1px solid #ccc;
+          color: #525252;
+          @include round6();
+          text-align: center;
+          text-decoration: none;
+        }
+      }
     }
+  }
 }
 
+.page-nation {
+  clear: both;
+}
+// ページネーションはdiary_main.scssを参照している
 
-
-
-
-
-
->>>>>>> cd50fdb797a5c9208b659db8555cb4fe77fc6691
+// 投稿一覧のスタイル
