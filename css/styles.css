@@ -491,7 +491,7 @@ header {
 @media screen and (max-width: 399px) {
   #q_form .q_email_form {
     width: 280px;
-    padding: 16px;
+    padding: 13px;
   }
 }
 
@@ -519,6 +519,7 @@ header {
 
 #q_form .q_email_form .form {
   padding-bottom: 10px;
+  padding-left: 10px;
   margin-bottom: 20px;
   display: inline-block;
   border-bottom: 1px solid #b3b3b3;
@@ -533,18 +534,11 @@ header {
   display: inline-block;
   margin-bottom: 10px;
   font-weight: bold;
-  width: 250px;
 }
 
 @media screen and (max-width: 399px) {
   #q_form .q_email_form .form label {
     font-size: 14px;
-  }
-}
-
-@media screen and (max-width: 399px) {
-  #q_form .q_email_form .form {
-    width: 250px;
   }
 }
 
@@ -630,6 +624,14 @@ header {
   border-radius: 6px;
 }
 
+@media screen and (max-width: 399px) {
+  #q_form .q_email_form button[type="submit"] {
+    width: 150px;
+    height: 40px;
+    box-shadow: 0px 3px 0px #b8772e;
+  }
+}
+
 #q_form .q_email_form .item {
   margin-bottom: 10px;
 }
@@ -676,7 +678,7 @@ header {
 
 @media screen and (max-width: 399px) {
   #q_form .q_email_form {
-    width: 250px;
+    width: 278px;
     padding: 15px;
   }
 }
