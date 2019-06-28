@@ -534,6 +534,7 @@ header {
   display: inline-block;
   margin-bottom: 10px;
   font-weight: bold;
+  width: 250px;
 }
 
 @media screen and (max-width: 399px) {
