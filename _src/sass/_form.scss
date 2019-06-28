@@ -44,7 +44,7 @@
       display: inline-block;
       margin-bottom: 10px;
       font-weight: bold;
-
+      width: 250px;
       @include mq-down(sm) {
         font-size: 14px;
       }
