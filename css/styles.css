@@ -507,6 +507,12 @@ header {
   }
 }
 
+#q_form .q_email_form p .span {
+  color: brown;
+  font-size: 13px;
+  text-align: center;
+}
+
 #q_form .q_email_form .q_title {
   text-align: center;
 }

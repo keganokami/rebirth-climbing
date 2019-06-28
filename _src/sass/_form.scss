@@ -18,6 +18,11 @@
     @include mq-down(sm) {
       font-size: 14px;
     }
+    .span {
+      color: brown;
+      font-size: 13px;
+      text-align: center;
+    }
   }
   .q_title {
     text-align: center;

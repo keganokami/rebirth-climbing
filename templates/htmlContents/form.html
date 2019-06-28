@@ -4,10 +4,20 @@
       <h2 class="q_title">お問い合わせ</h2>
     </div>
     <div>
-      <form action="#" method="post" name="form" onsubmit="return validate()">
+      <form
+        action="./index.php"
+        method="post"
+        name="form"
+        onsubmit="return validate()"
+      >
         <p>
-          お問い合わせ内容をご入力の上、「確認画面へ」ボタンをクリックしてください。
+          お問い合わせ内容をご入力の上、「確認画面へ」ボタンをクリックしてください。<br />
+          <span class="tip"
+            >確認メールの受信をもって送信の完了となります。</span
+          >
         </p>
+        <p class="mail_result">{$success_send_mail}</p>
+        <p class="mail_result">{$error_send_mail}</p>
         <div>
           <div class="form">
             <label>お名前<span>必須</span></label>
@@ -16,10 +26,11 @@
               name="name"
               placeholder="例）山田太郎"
               value=""
+              required
             />
           </div>
           <div class="form">
-            <label>ふりがな<span>必須</span></label>
+            <label>ふりがな</label>
             <input
               type="text"
               name="furigana"
@@ -34,11 +45,12 @@
               name="email"
               placeholder="例）guest@example.com"
               value=""
+              required
             />
           </div>
           <div class="form">
             <label>お問い合わせ項目<span>必須</span></label>
-            <select name="item">
+            <select name="item" required>
               <option value="">選択してください</option>
               <option value="体験入部希望">体験入部希望</option>
               <option value="質問・疑問">ご質問・疑問</option>
@@ -48,12 +60,13 @@
             <textarea
               name="content"
               rows="5"
-              placeholder="お問合せ内容を入力"
+              placeholder="お問合せ内容を入力　必須"
+              required
             ></textarea>
           </div>
         </div>
         <div class="submit_form">
-          <button type="submit">確認画面へ</button>
+          <button type="submit">送信する</button>
         </div>
       </form>
     </div>
