@@ -13,19 +13,20 @@ Vue.component("menu-component", {
   template: `
   <div>
   <li><a class="home" href="./index.php">ホーム</a></li>
-  <li><a class="about_us" href="./about_us.php">サイトについて</a></li>
+ 
   <li><a class="member" href="./members.php">メンバー紹介</a></li>
   <li><a class="diary" href="./diary.php">一言日記</a></li>
   <li><a class="society" href="./login.php">会員専用</a></li>
   </div>`
 });
+ // <li><a class="about_us" href="./about_us.php">サイトについて</a></li>
 
 // 会員専用のリストコンポーネント　post.htmlでのみ使う
 Vue.component("member-only-menu-component", {
   template: `
   <div>
   <li><a class="home" href="./index.php">ホーム</a></li>
-  <li><a class="about_us" href="./about_us.php">サイトについて</a></li>
+  
   <li><a class="member" href="./members.php">メンバー紹介</a></li>
   <li><a class="diary" href="./diary.php">一言日記</a></li>
   <li><a class="logout" href="./logout.php">ログアウト</a></li>
